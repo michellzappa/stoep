@@ -55,10 +55,6 @@ The deliberate order is: pin the concepts → validate with a buurt → then bui
 |---|---|
 | [[Precedents-and-evidence]] | Decidim, Consul, vTaiwan, Commonplace — positive comparables. Ostrom, Putnam, SCP, Movisie — policy evidence base |
 
-## Lineage
-
-Stoep sits next to [[helm]], [[hivemind]], and [[lagosta]] in Envisioning's active work but is structurally different: it is a municipally-funded civic infrastructure prototype with a distinct governance model, not a product on the Envisioning commercial roadmap.
-
 ## Core bet
 
 Neighborhood social networks have a graveyard. The projects that persist either (a) have Nextdoor-style commercial intensity or (b) are tightly fused with municipal function. Path (b) is the only plausible one here, which means the gemeente integration is not a nice-to-have — it is the entire adoption strategy. See [[Risks-and-next-steps]].
