@@ -4,7 +4,7 @@
 
 Amsterdam buurten already have dense social infrastructure — WhatsApp groups, bewonersinitiatieven, buurtverenigingen, stadsdeelcommissies, buurthuizen. What they lack is a persistent, civic-first digital layer that is *theirs*. Nextdoor colonised this space in the US and entered NL; it is corporate, engagement-maximising, surveillance-prone, and structurally hostile to municipal integration.
 
-Stoep is the alternative: an open source, fediverse-native neighborhood network, hyperlocal by default, designed from the ground up to be *fused with gemeente function* rather than adjacent to it.
+Stoep is the alternative: an open source, fediverse-native neighborhood network, hyperlocal by default, designed from the ground up to be *fused with gemeente function* rather than adjacent to it. Strategically, it is a **miniverse** in the [post-naive internet](https://www.mozillafoundation.org/en/nothing-personal/the-post-naive-internet-era/) sense — infrastructure for one community's needs, not a bid to replace big tech for everyone. See [[Smaller-internets]].
 
 ## What "local" means here
 

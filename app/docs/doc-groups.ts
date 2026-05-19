@@ -38,6 +38,7 @@ export const DOC_GROUPS: DocGroup[] = [
   {
     label: "Research & precedent",
     items: [
+      { slug: "smaller-internets", title: "Smaller internets" },
       { slug: "precedents-and-evidence", title: "Precedents & evidence" },
     ],
   },

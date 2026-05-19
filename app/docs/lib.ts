@@ -70,6 +70,7 @@ const KNOWN_SLUGS = new Set([
   "resident-rights",
   "identity-edge-cases",
   "precedents-and-evidence",
+  "smaller-internets",
 ]);
 
 export { DOC_GROUPS, type DocGroup } from "./doc-groups";

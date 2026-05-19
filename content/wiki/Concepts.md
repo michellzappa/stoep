@@ -68,6 +68,10 @@ Every failure mode of "neighborhood app" resolves to: only young techies used it
 - Paper QR flyers with address-verified signup in buurthuis, supermarket, library.
 - Physical launch events (buurtborrels) as the primary recruitment channel — see [[Adoption]].
 
+## Smaller-internet scope
+
+Default experience is deliberately **smaller than one WhatsApp group** — roughly 200 neighbors on your straat, not a city feed. This is not a launch constraint to outgrow; it is the post-naive bet that legitimacy and civic outcomes come from bounded community, not scale. See [[Smaller-internets]].
+
 ## No engagement metrics
 
 Explicit anti-feature.

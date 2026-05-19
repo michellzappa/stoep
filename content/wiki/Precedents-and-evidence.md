@@ -2,6 +2,12 @@
 
 [[Risks-and-next-steps|The graveyard]] covers what failed. This file covers what works — internationally — and what the research actually says about the underlying social goals.
 
+## Cultural framing: smaller internets
+
+Before the product comparables: Stoep sits in a wider shift from "fix the whole internet" to **community-scoped digital infrastructure** — miniverses on structural, value, design, and community layers. Mozilla Foundation / co—matter call this the [post-naive internet era](https://www.mozillafoundation.org/en/nothing-personal/the-post-naive-internet-era/) (Oct 2025). Full mapping to Stoep: [[Smaller-internets]].
+
+Worth naming in pitches alongside Decidim and Ostrom: funders increasingly recognise **islands that interconnect** as more honest than another universal platform play.
+
 ## International civic-tech precedents
 
 Positive comparables. Every one of these is running, studied, and instructive.

@@ -21,6 +21,7 @@ The deliberate order is: pin the concepts → validate with a buurt → then bui
 | File | What it holds |
 |---|---|
 | [[Vision]] | Thesis, differentiation from Nextdoor, why fediverse, what "local" means |
+| [[Smaller-internets]] | Post-naive / miniverse framing — why buurt-scale is the point, four layers, ecosystem context |
 | [[Concepts]] | Core primitives: buurt-as-unit, buurtpaspoort, buurt-digest, straatgeschiedenis, federation, moderation-as-civic-role, offline bridges |
 | [[Personas]] | Day-in-the-life scenarios: Aisha, Henk, Mehmet, Lena, Farida — each stress-tests a different design decision |
 
@@ -53,7 +54,7 @@ The deliberate order is: pin the concepts → validate with a buurt → then bui
 
 | File | What it holds |
 |---|---|
-| [[Precedents-and-evidence]] | Decidim, Consul, vTaiwan, Commonplace — positive comparables. Ostrom, Putnam, SCP, Movisie — policy evidence base |
+| [[Precedents-and-evidence]] | Decidim, Consul, vTaiwan, Commonplace — positive comparables. Ostrom, Putnam, SCP, Movisie — policy evidence base. See also [[Smaller-internets]] for cultural/infra framing |
 
 ## Core bet
 
