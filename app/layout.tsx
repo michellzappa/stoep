@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { SiteFooter } from "./components/Footer";
 import { LanguageProvider } from "./lib/i18n";
 
 export const metadata: Metadata = {
@@ -18,8 +19,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="stylesheet"
         />
       </head>
-      <body className="font-sans">
-        <LanguageProvider>{children}</LanguageProvider>
+      <body className="font-sans min-h-screen flex flex-col">
+        <LanguageProvider>
+          <div className="flex-1">{children}</div>
+          <SiteFooter />
+        </LanguageProvider>
       </body>
     </html>
   );
