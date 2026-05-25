@@ -34,7 +34,11 @@ export async function readDoc(
   if (!file) return null;
   const raw = await fs.readFile(file, "utf-8");
   const title = path.basename(file, ".md");
-  return { title, body: rewriteWikilinks(raw) };
+  return { title, body: rewriteWikilinks(stripTitleHeading(raw)) };
+}
+
+function stripTitleHeading(src: string): string {
+  return src.replace(/^#\s+[^\n]+\n+/, "");
 }
 
 export function rewriteWikilinks(src: string): string {
