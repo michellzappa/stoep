@@ -4,8 +4,8 @@ import remarkGfm from "remark-gfm";
 
 export function DocView({ title, body }: { title: string; body: string }) {
   return (
-    <article className="prose-stoep">
-      <div className="text-xs uppercase tracking-widest text-[var(--color-stoep)] mb-2">
+    <article className="prose-uitwijken">
+      <div className="text-xs uppercase tracking-widest text-[var(--color-uitwijken)] mb-2">
         Wiki
       </div>
       <h1 className="font-serif italic text-4xl leading-tight mb-6">
@@ -18,7 +18,7 @@ export function DocView({ title, body }: { title: string; body: string }) {
             const h = href ?? "";
             if (h.startsWith("/docs/")) {
               return (
-                <Link href={h} className="text-[var(--color-stoep)] underline">
+                <Link href={h} className="text-[var(--color-uitwijken)] underline">
                   {children}
                 </Link>
               );
@@ -28,7 +28,7 @@ export function DocView({ title, body }: { title: string; body: string }) {
                 href={h}
                 target={h.startsWith("http") ? "_blank" : undefined}
                 rel="noreferrer"
-                className="text-[var(--color-stoep)] underline"
+                className="text-[var(--color-uitwijken)] underline"
               >
                 {children}
               </a>

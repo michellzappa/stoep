@@ -2,49 +2,69 @@
 
 ## Thesis
 
-Amsterdam buurten already have dense social infrastructure — WhatsApp groups, bewonersinitiatieven, buurtverenigingen, stadsdeelcommissies, buurthuizen. What they lack is a persistent, civic-first digital layer that is *theirs*. Nextdoor colonised this space in the US and entered NL; it is corporate, engagement-maximising, surveillance-prone, and structurally hostile to municipal integration.
+Current social platforms are called social, but they are not built to strengthen society. They are owned by companies, shaped by commercial incentives, and optimized around feeds. Government channels have the opposite problem: they contain useful information, but they are fragmented, bureaucratic, and usually require residents to pull information manually.
 
-Stoep is the alternative: an open source, fediverse-native neighborhood network, hyperlocal by default, designed from the ground up to be *fused with gemeente function* rather than adjacent to it. Strategically, it is a **miniverse** in the [post-naive internet](https://www.mozillafoundation.org/en/nothing-personal/the-post-naive-internet-era/) sense — infrastructure for one community's needs, not a bid to replace big tech for everyone. See [[Smaller-internets]].
+Uitwijken.nl is the alternative: a **society-owned, location-and-theme-based civic community layer**. It helps a person answer four questions at the scale that matters to them:
 
-## What "local" means here
+- What is happening where I live?
+- Which themes matter here?
+- What can I influence?
+- Where can I show up in the physical world?
 
-The atomic unit is the *buurt* as defined by the gemeente's own administrative polygon — not an arbitrary radius, not a tech-chosen hexagon. Default view scopes to your straat and surrounding blocks: roughly 200 neighbors, not 20,000. See [[Concepts]] → buurt-as-unit.
+The product is social, but not in the personal-expression sense. Its purpose is not more posting. Its purpose is to help people become a better actual community.
 
-Federation lets buurten connect upward (stadsdeel, city, national) when the topic warrants it, but daily texture feels like a front stoop, not a feed.
+## The Backbone
 
-## Differentiation from Nextdoor
+The differentiator is the combination of two axes:
 
-| Dimension | Nextdoor | Stoep |
-|---|---|---|
-| Ownership | US-listed corporation | Dutch coöperatie stewardship (long-term) |
-| Revenue model | Ads, data | Grants + municipal contracts |
-| Feed | Engagement-ranked | Chronological, proximity-scoped |
-| Identity | Real names, address-adjacent | Real names, BAG-verified addresses |
-| Moderation | Trust & Safety team | Neighbors under publicly-written norms, buurt council appeals |
-| Data practices | Criticised under AVG/GDPR | GDPR-native by design, data minimisation |
-| Municipal integration | Ad-hoc, commercial | First-class; meldingen, buurtbudget, omgevingsvergunningen |
-| Federation | Closed silo | ActivityPub, portable identity |
-| Code | Proprietary | AGPL, reusable across Dutch gemeentes |
+| Axis | What it means |
+|---|---|
+| Location | House, street, buurt, city, province, country, or any meaningful civic geography |
+| Theme | Healthcare, youth, safety, events, services, permits, public space, budgets, entrepreneurship, care, culture |
 
-## Why fediverse
+Most existing platforms give users flat containers: a group, a channel, a page, a subreddit, a neighborhood feed. Uitwijken.nl gives them a dynamic civic lens. A resident can zoom from street-level cleanliness to neighborhood healthcare to citywide mobility, while keeping the same theme-and-location model.
 
-Three reasons, in order of importance:
+## Three Roles
 
-1. **Public-sector procurement fit.** PublicSpaces principles and the Dutch digital sovereignty agenda explicitly favour federated, open infrastructure over US silos. This unlocks funding conversations that a proprietary build would fail.
-2. **Portability of identity and content.** A resident moving from Oost to Noord should not lose their civic history. ActivityPub makes this structural.
-3. **Commons reusability.** If Stoep speaks ActivityPub and [[Technical-stack|Common Ground]] APIs, the reference implementation is portable to every Dutch gemeente. Amsterdam funds the prototype; the infrastructure becomes a Dutch civic commons. This reframes the project from "Amsterdam pilot" to "resident-layer Common Ground reference," which is a much larger funding story.
+Uitwijken.nl mirrors the way physical communities already work:
 
-## What Stoep is not
+| Role | Contribution |
+|---|---|
+| Residents | Lived experience, needs, priorities, feedback, local energy |
+| Government | Public information, safety, plans, budgets, policy questions, civic responsibility |
+| Entrepreneurs | Services, facilities, local economic activity, spaces, practical support |
 
-- Not a replacement for WhatsApp. WhatsApp is where urgent, intimate buurt chatter lives and should stay. Stoep is the *persistent layer underneath* — archive, directory, events, map, civic interface — that WhatsApp is structurally bad at.
-- Not a Nextdoor clone with a Dutch wrapper. The feed primitive is different; the unit of scope is different; the identity model is different; the moderation model is different.
-- Not a generic social app. It is a resident-facing frontend over municipal data and civic process.
-- Not building from scratch. See [[Technical-stack]].
+The platform should make these roles visible without turning them into separate silos. A theme such as youth wellbeing, street safety, or local events may involve all three at once.
+
+## Democratic Mechanism
+
+Uitwijken.nl should support a democratic system of what needs to be done in an area. That includes questionnaires, budget prioritization, feedback on plans, resident-generated needs, and formal participation processes.
+
+The point is not that residents decide everything. The point is that government can ask better questions, residents can signal what matters, and entrepreneurs can contribute where they have useful capacity.
+
+## Digital To Physical
+
+The KPI is not attention, posting volume, or social graph growth. The KPI is whether digital participation improves physical community life:
+
+- People know what is happening nearby.
+- Local plans become easier to understand.
+- Residents participate earlier and with more context.
+- Events and initiatives bring people together.
+- Local services and spaces are easier to find.
+- Loneliness and fragmentation are reduced by practical participation.
+
+The digital layer is not the destination. It is the coordination surface for real places.
+
+## Ownership
+
+Uitwijken.nl should not be owned by government and should not be owned by a company. Government can finance, enable, publish, and participate. Businesses can help build, host, and serve. Residents can shape needs and priorities. But the long-term ownership model should reflect the premise: **from, for, and by society**.
+
+This likely means an association, foundation, cooperative, or hybrid civic stewardship model. The exact form is an open design question, not a branding detail.
 
 ## Name
 
-*Stoep* evokes the physical threshold between home and street where Dutch neighbors have always encountered each other informally. The product is the digital stoep: not a living room (too private, WhatsApp), not a plein (too public, Twitter), but the in-between where people actually meet.
+**Uitwijken.nl** gives the concept range: wijk, wijken, changing scale, and redirecting attention from generic social media back into real communities.
 
 ## Tags
 
-#year/2026 #env/planning #city/amsterdam
+#year/2026 #env/pitch #city/amsterdam

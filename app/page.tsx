@@ -6,100 +6,94 @@ type Mock = {
   slug: string;
   number: string;
   title: { nl: string; en: string };
-  persona: { nl: string; en: string };
+  lens: { nl: string; en: string };
   summary: { nl: string; en: string };
-  tests: { nl: string; en: string };
+  proves: { nl: string; en: string };
 };
 
 const mocks: Mock[] = [
   {
-    slug: "feed",
+    slug: "map",
     number: "01",
-    title: { nl: "Buurt-feed", en: "Neighborhood feed" },
-    persona: { nl: "Aisha · maandagavond", en: "Aisha · Monday evening" },
+    title: { nl: "Kaartlens", en: "Map lens" },
+    lens: { nl: "Locatie + thema", en: "Location + theme" },
     summary: {
-      nl: "Chronologisch, proximity-scoped. Resident-posts en civic items door elkaar. Geen engagement-ranking, geen 'For You'.",
-      en: "Chronological, proximity-scoped. Resident posts and civic items interleaved. No engagement-ranking, no 'For You'.",
+      nl: "De hoofdinteractie: zoom van straat naar buurt naar stad en filter civic objecten op thema, rol en urgentie.",
+      en: "The main interaction: zoom from street to neighborhood to city and filter civic objects by theme, role, and urgency.",
     },
-    tests: {
-      nl: "Daily-use primitive · bedrijfspaspoort-markering · buurtbudget inline",
-      en: "Daily-use primitive · business-passport marking · neighborhood budget inline",
+    proves: {
+      nl: "Cascading geography · geen platte groep · kaart als ruggengraat",
+      en: "Cascading geography · not a flat group · map as backbone",
     },
   },
   {
-    slug: "melding",
+    slug: "themes",
     number: "02",
-    title: { nl: "Melding maken", en: "Report an issue" },
-    persona: { nl: "Aisha · woensdagochtend", en: "Aisha · Wednesday morning" },
+    title: { nl: "Themaweergave", en: "Theme view" },
+    lens: { nl: "Zorg in de Indische Buurt", en: "Care in the Indische Buurt" },
     summary: {
-      nl: "Long-press op de kaart → foto → categorie → verzonden naar Signalen. De melding verschijnt direct in de feed, zichtbaar voor buren.",
-      en: "Long-press on the map → photo → category → submitted to Signalen. The report lands immediately in the feed, visible to neighbors.",
+      nl: "Een thema door meerdere schaalniveaus heen: bewonerssignalen, plannen, events, diensten en ondernemersbijdragen.",
+      en: "One theme across multiple scales: resident signals, plans, events, services, and entrepreneur contributions.",
     },
-    tests: {
-      nl: "Civic-interface laag · read-and-write over gemeente-data · Signalen integratie",
-      en: "Civic-interface layer · read-and-write over municipal data · Signalen integration",
+    proves: {
+      nl: "Subjectmodel · AI-clustering · rollen in context",
+      en: "Subject model · AI clustering · roles in context",
     },
   },
   {
-    slug: "digest",
+    slug: "vragen",
     number: "03",
-    title: { nl: "Wekelijkse buurt-digest", en: "Weekly neighborhood digest" },
-    persona: { nl: "Voor iedereen · zaterdagochtend", en: "For everyone · Saturday morning" },
+    title: { nl: "Vragen & budget", en: "Questions & budget" },
+    lens: { nl: "€300k buurtbudget", en: "€300k neighborhood budget" },
     summary: {
-      nl: "Machine-gegenereerd uit open data. Meldingen opgelost, nieuwe vergunningen, evenementen, één Stadsarchief-foto, één buurtbudget-voorstel.",
-      en: "Machine-generated from open data. Reports resolved, new permits, events, one Stadsarchief photo, one neighborhood-budget proposal.",
+      nl: "Een vragenlijst die bewoners helpt prioriteren: welk thema, welke plek, welke actie, welk budget.",
+      en: "A questionnaire that helps residents prioritize: which theme, which place, which action, which budget.",
     },
-    tests: {
-      nl: "Reden om de app te openen · identiek aan print-versie op buurthuis-prikbord",
-      en: "Reason to open the app · identical to the print version on the community-center noticeboard",
+    proves: {
+      nl: "Democratisch mechanisme · gestructureerde feedback · besluitvorming",
+      en: "Democratic mechanism · structured feedback · decision-making",
     },
   },
   {
-    slug: "adres",
+    slug: "events",
     number: "04",
-    title: { nl: "Straatgeschiedenis", en: "Street history" },
-    persona: { nl: "Per adres · Javastraat 143", en: "Per address · Javastraat 143" },
+    title: { nl: "Events & actie", en: "Events & action" },
+    lens: { nl: "Van digitaal naar fysiek", en: "Digital to physical" },
     summary: {
-      nl: "Stadsarchief-foto's, vergunning-historie, bouwjaar, monumentstatus, boom van de straat. Ambient context die de plek rooted maakt.",
-      en: "Stadsarchief photos, permit history, build year, monument status, street tree. Ambient context that roots the platform in place.",
+      nl: "Lokale events als eerste reden om terug te komen, gekoppeld aan thema's, plekken, organisaties en acties.",
+      en: "Local events as the first reason to return, connected to themes, places, organizations, and actions.",
     },
-    tests: {
-      nl: "Delight-laag · onreproduceerbaar voor Nextdoor · laag-effort voor hoge engagement",
-      en: "Delight layer · not reproducible by Nextdoor · low-effort for high engagement",
+    proves: {
+      nl: "Adoptiehaak · fysieke community · ondernemers en voorzieningen",
+      en: "Adoption hook · physical community · entrepreneurs and facilities",
     },
   },
   {
-    slug: "onboarding",
+    slug: "inbox",
     number: "05",
-    title: {
-      nl: "Buurtpaspoort — getrapte verificatie",
-      en: "Neighborhood passport — tiered verification",
-    },
-    persona: {
-      nl: "Lena · 4 maanden in NL, shortstay",
-      en: "Lena · 4 months in NL, short-stay",
-    },
+    title: { nl: "Civic inbox", en: "Civic inbox" },
+    lens: { nl: "Push in plaats van zoeken", en: "Push instead of search" },
     summary: {
-      nl: "Drie tiers: read-only bezoeker → vouched (2 buren) → BAG-geverifieerd. Niemand wordt uitgesloten door bureaucratische vorm.",
-      en: "Three tiers: read-only visitor → vouched (2 neighbors) → BAG-verified. Nobody is excluded by bureaucratic form.",
+      nl: "Vergunningen, plannen, consultaties en open data worden relevant gemaakt op basis van jouw locaties en thema's.",
+      en: "Permits, plans, consultations, and open data become relevant based on your locations and themes.",
     },
-    tests: {
-      nl: "Identity edge-cases · DV, shortstay, huurders zonder BAG · welcome zonder trust-dilutie",
-      en: "Identity edge cases · DV survivors, short-stay, tenants without BAG · welcoming without trust dilution",
+    proves: {
+      nl: "Overheidsinformatie · context · open data als productlaag",
+      en: "Government information · context · open data as product layer",
     },
   },
   {
-    slug: "moderatie",
+    slug: "governance",
     number: "06",
-    title: { nl: "Buurtconnector-dashboard", en: "Neighborhood-connector dashboard" },
-    persona: { nl: "Farida · dagelijks", en: "Farida · daily" },
+    title: { nl: "Rollen & governance", en: "Roles & governance" },
+    lens: { nl: "Van, voor en door samenleving", en: "From, for, and by society" },
     summary: {
-      nl: "Moderation queue, council-appeals, outreach-lijst. Desktop. Zichtbare, betaalde, roulerende civic rol — geen Trust & Safety team.",
-      en: "Moderation queue, council appeals, outreach list. Desktop. Visible, paid, rotating civic role — no Trust & Safety team.",
+      nl: "Laat zien hoe bewoners, overheid en ondernemers deelnemen zonder dat de stad of een bedrijf eigenaar wordt.",
+      en: "Shows how residents, government, and entrepreneurs participate without the city or a company owning the platform.",
     },
-    tests: {
-      nl: "Moderation-as-civic-role · sustainability · governance zichtbaar",
-      en: "Moderation-as-civic-role · sustainability · governance visible",
+    proves: {
+      nl: "Drie rollen · formeel/informeel · moderatiebord · eigenaarschap",
+      en: "Three roles · formal/informal · moderation board · ownership",
     },
   },
 ];
@@ -109,17 +103,17 @@ export default function Home() {
     <div className="min-h-screen">
       <TopBar />
       <PageHeader
-        eyebrow={<T nl="Pilot · Indische Buurt · 2026" en="Pilot · Indische Buurt · 2026" />}
+        eyebrow={<T nl="Amsterdam · 2026" en="Amsterdam · 2026" />}
         title={
           <T
-            nl="Stoep — zes mock-schermen om mee te denken"
-            en="Stoep — six mock screens to think with"
+            nl="Uitwijken.nl — society-owned civic layer"
+            en="Uitwijken.nl — society-owned civic layer"
           />
         }
         subtitle={
           <T
-            nl="Geen plan, geen build. Zes schermen die de primitieven concreet maken: wat een bewoner ziet, wat een buurtconnector doet, hoe de civic-laag aanvoelt. Alle teksten zijn tweetalig (NL/EN) — wissel met de toggle rechtsboven. Gebaseerd op de concepten-notities in ~/obsidian/Stoep."
-            en="Not a plan, not a build. Six screens that make the primitives concrete: what a resident sees, what a neighborhood-connector does, how the civic layer feels. All copy is bilingual (NL/EN) — toggle top-right. Based on the concept notes in ~/obsidian/Stoep."
+            nl="Een proof-of-concept voor instant communities op basis van waar je bent en wat je belangrijk vindt. Geen nieuwe feed, maar een kaart- en themalaag waar bewoners, overheid en ondernemers samen lokale informatie, vragen, events, diensten en beslissingen kunnen organiseren."
+            en="A proof-of-concept for instant communities based on where you are and what you care about. Not a new feed, but a map-and-theme layer where residents, government, and entrepreneurs organize local information, questions, events, services, and decisions."
           />
         }
       />
@@ -130,14 +124,14 @@ export default function Home() {
             <Link
               key={m.slug}
               href={`/${m.slug}`}
-              className="group border border-[#e6e2d6] rounded-2xl p-6 bg-white hover:bg-[var(--color-stoep-soft)]/40 transition"
+              className="group border border-[#e6e2d6] rounded-xl p-6 bg-white hover:bg-[var(--color-uitwijken-soft)]/35 transition"
             >
-              <div className="flex items-baseline gap-3 mb-3">
-                <span className="font-serif italic text-2xl text-[var(--color-stoep)]">
+              <div className="flex items-baseline justify-between gap-3 mb-3">
+                <span className="font-serif italic text-2xl text-[var(--color-uitwijken)]">
                   {m.number}
                 </span>
-                <span className="text-xs uppercase tracking-widest text-[#6b6658]">
-                  <T {...m.persona} />
+                <span className="text-xs uppercase tracking-widest text-[#6b6658] text-right">
+                  <T {...m.lens} />
                 </span>
               </div>
               <h2 className="font-serif italic text-2xl mb-2 group-hover:underline">
@@ -147,8 +141,8 @@ export default function Home() {
                 <T {...m.summary} />
               </p>
               <div className="text-[11px] uppercase tracking-wider text-[#6b6658] border-t border-dashed border-[#d9d3c3] pt-3">
-                <T nl="Stress-test — " en="Stress-tests — " />
-                <T {...m.tests} />
+                <T nl="Bewijst — " en="Proves — " />
+                <T {...m.proves} />
               </div>
             </Link>
           ))}
@@ -157,20 +151,20 @@ export default function Home() {
         <div className="mt-12 border-t border-dashed border-[#d9d3c3] pt-6 text-[13px] text-[#6b6658] leading-relaxed max-w-3xl">
           <p className="mb-2">
             <strong className="text-[var(--color-ink)]">
-              <T nl="Leesvolgorde voor een pitch-gesprek:" en="Reading order for a pitch meeting:" />
+              <T nl="Pitchvolgorde:" en="Pitch order:" />
             </strong>{" "}
             <T
-              nl="01 → 03 → 04 → 02 → 05 → 06. Begin bij de dagelijkse textuur, laat dan de civic-laag zien, daarna governance."
-              en="01 → 03 → 04 → 02 → 05 → 06. Start with daily texture, then the civic layer, then governance."
+              nl="01 → 02 → 03 → 04 → 05 → 06. Begin met de ruggengraat, bewijs daarna thema's, besluitvorming, fysieke actie, civic informatie en eigenaarschap."
+              en="01 → 02 → 03 → 04 → 05 → 06. Start with the backbone, then prove themes, decision-making, physical action, civic information, and ownership."
             />
           </p>
           <p>
             <strong className="text-[var(--color-ink)]">
-              <T nl="Wat dit niet is:" en="What this is not:" />
+              <T nl="Wat dit niet meer is:" en="What this no longer is:" />
             </strong>{" "}
             <T
-              nl="een ontwerp. De intent is om aannames tastbaar te maken zodat ze uit elkaar geplukt kunnen worden tijdens co-design. Alle content is plausibel-maar-verzonnen."
-              en="a design. The intent is to make assumptions tangible so they can be picked apart in co-design. All content is plausible-but-invented."
+              nl="een buurt-feed met gemeentelijke integraties. De feed kan later bestaan, maar de kern is nu de dynamische combinatie van locatie, thema, rollen en actie."
+              en="a neighborhood feed with municipal integrations. A feed may exist later, but the core is now the dynamic combination of location, theme, roles, and action."
             />
           </p>
         </div>

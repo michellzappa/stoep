@@ -1,65 +1,53 @@
-# Stoep
+# Uitwijken.nl
 
-**Status:** Exploration — April 2026. Long before build.
+**Status:** concept and pitch prototype, May 2026.
 
-**What:** A local social network for Amsterdam buurten. Like Nextdoor, but open source, fediverse-native, and fused with municipal function. Gemeente Amsterdam wants to commission [[MZ]] / [[Envisioning]] to prototype it.
+**What:** Uitwijken.nl is a society-owned civic community layer for Amsterdam and, eventually, other Dutch places. It combines two axes that existing platforms keep separate: **where you are** and **what you care about**. The result is an instant community model for a house, street, buurt, city, province, country, or any other meaningful civic layer.
 
-**Name:** *Stoep* — Dutch for "sidewalk" or "front step." The threshold between private and public where neighbors actually encounter each other. The product is the digital stoep.
+**Core distinction:** Uitwijken.nl is not a government platform, not a company platform, and not another engagement feed. It is intended to be **from, for, and by society**: a shared digital layer where residents, government, and entrepreneurs can understand what is happening locally, make decisions, coordinate services, discover events, and move into physical-world action.
 
 ---
 
 ## Why this folder exists
 
-These are building blocks, not a plan. The seeding conversation spanned funding, technical stack, data sources, adoption, and governance. This folder captures each slice as its own concept note so they can be reworked in isolation, backlinked, and iterated before a single line of code is written.
+This folder captures the current concept as a **location-and-theme civic operating layer**:
 
-The deliberate order is: pin the concepts → validate with a buurt → then build.
+- Location cascades from house to street to buurt to city and beyond.
+- Themes organize public life across healthcare, safety, youth, events, services, budgets, planning, and local initiatives.
+- Three roles participate: residents, government, and entrepreneurs.
+- The platform turns scattered civic information into structured decisions, events, questionnaires, and action.
 
-## Map
+The immediate goal is a proof-of-concept convincing enough for a conversation with Amsterdam innovation leadership.
 
-### Core
+## Active Map
 
-| File | What it holds |
-|---|---|
-| [[Vision]] | Thesis, differentiation from Nextdoor, why fediverse, what "local" means |
-| [[Smaller-internets]] | Post-naive / miniverse framing — why buurt-scale is the point, four layers, ecosystem context |
-| [[Concepts]] | Core primitives: buurt-as-unit, buurtpaspoort, buurt-digest, straatgeschiedenis, federation, moderation-as-civic-role, offline bridges |
-| [[Personas]] | Day-in-the-life scenarios: Aisha, Henk, Mehmet, Lena, Farida — each stress-tests a different design decision |
-
-### Strategy & execution
+### Concept
 
 | File | What it holds |
 |---|---|
-| [[Funding]] | Grant landscape (Innovatiebudget, SIDN, NLnet, Stimuleringsfonds), structural options (commissioned pilot, matched, coöperatie) |
-| [[Adoption]] | Seeding strategy, buurtconnectors, gemeente-as-first-user, physical launch |
-| [[Timeline]] | Month-by-month pilot plan with decision gates |
-| [[Post-pilot]] | Year 2–5 trajectory: replication, second gemeente, maturity-or-fork at year 5 |
-| [[Risks-and-next-steps]] | Graveyard of comparable projects, failure modes, concrete next actions |
+| [[Vision]] | The thesis: society-owned, location-plus-theme, physical-world community |
+| [[Concepts]] | Core product primitives: cascading geography, themes, roles, questionnaires, events, action loops |
+| [[Governance]] | Ownership, formal/informal communities, moderation boards, and the three-role build model |
 
-### Technical & data
+### Product Proof
 
 | File | What it holds |
 |---|---|
-| [[Technical-stack]] | Stack options (Bonfire, Hometown, Lemmy), architecture, licensing, Common Ground fit, federation politics |
-| [[Open-data]] | Amsterdam data sources and the product features they enable |
+| [[Proof-of-concept]] | The six wireframes needed to make the idea concrete |
+| [[Open-data]] | Amsterdam data sources and how they become map layers, plans, events, and civic prompts |
+| [[Adoption]] | Events as the bootstrap hook, questionnaires as the participation hook |
 
-### Governance & rights
-
-| File | What it holds |
-|---|---|
-| [[Governance]] | Coöperatie U.A. structure, decision rights, buurt council, commercial & political boundaries, moderation ops |
-| [[Resident-rights]] | The civic charter: 12 commitments, structurally enforced |
-| [[Identity-edge-cases]] | DV survivors, shortstay, tenants without BAG, students, undocumented residents, minors, non-resident stakeholders |
-
-### Research & precedent
+### Delivery
 
 | File | What it holds |
 |---|---|
-| [[Precedents-and-evidence]] | Decidim, Consul, vTaiwan, Commonplace — positive comparables. Ostrom, Putnam, SCP, Movisie — policy evidence base. See also [[Smaller-internets]] for cultural/infra framing |
+| [[Funding]] | How a society-owned platform can still fund a serious team |
+| [[Risks-and-next-steps]] | What must be proven now and next actions |
 
-## Core bet
+## One-sentence pitch
 
-Neighborhood social networks have a graveyard. The projects that persist either (a) have Nextdoor-style commercial intensity or (b) are tightly fused with municipal function. Path (b) is the only plausible one here, which means the gemeente integration is not a nice-to-have — it is the entire adoption strategy. See [[Risks-and-next-steps]].
+Uitwijken.nl is a public-interest, open-source, society-owned social platform that uses location, themes, maps, open data, questionnaires, events, and civic roles to help people understand, shape, and participate in their real-world communities.
 
 ## Tags
 
-#year/2026 #env/planning #city/amsterdam
+#year/2026 #env/pitch #city/amsterdam

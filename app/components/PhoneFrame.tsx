@@ -2,7 +2,7 @@ export function StatusBar({ title }: { title?: React.ReactNode }) {
   return (
     <div className="status-bar">
       <span>09:41</span>
-      <span className="text-[10px] uppercase tracking-widest text-[#6b6658]">{title ?? "stoep"}</span>
+      <span className="text-[10px] uppercase tracking-widest text-[#6b6658]">{title ?? "uitwijken.nl"}</span>
       <span>􀛨 􀋨 􀋦</span>
     </div>
   );

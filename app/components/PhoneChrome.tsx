@@ -24,7 +24,7 @@ export function TabBar({ active }: { active: "feed" | "kaart" | "buurt" | "ik" }
     <Link
       href={href}
       className={`flex flex-col items-center gap-1 text-[10px] ${
-        active === key ? "text-[var(--color-stoep)] font-semibold" : "text-[#6b6658]"
+        active === key ? "text-[var(--color-uitwijken)] font-semibold" : "text-[#6b6658]"
       }`}
     >
       <span className="text-base leading-none">
@@ -48,7 +48,7 @@ export function TabBar({ active }: { active: "feed" | "kaart" | "buurt" | "ik" }
 
 export function BuurtHeader() {
   return (
-    <div className="px-4 py-3 bg-[var(--color-stoep-soft)]/40">
+    <div className="px-4 py-3 bg-[var(--color-uitwijken-soft)]/40">
       <div className="flex items-center justify-between">
         <div>
           <div className="text-[10px] uppercase tracking-widest text-[#7a3418]">

@@ -13,14 +13,14 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [lang, setLangState] = useState<Lang>("nl");
   useEffect(() => {
     try {
-      const stored = localStorage.getItem("stoep-lang") as Lang | null;
+      const stored = localStorage.getItem("uitwijken-lang") as Lang | null;
       if (stored === "nl" || stored === "en") setLangState(stored);
     } catch {}
   }, []);
   const setLang = (l: Lang) => {
     setLangState(l);
     try {
-      localStorage.setItem("stoep-lang", l);
+      localStorage.setItem("uitwijken-lang", l);
       document.documentElement.lang = l;
     } catch {}
   };

@@ -4,8 +4,9 @@ import { SiteFooter } from "./components/Footer";
 import { LanguageProvider } from "./lib/i18n";
 
 export const metadata: Metadata = {
-  title: "Stoep — wireframes",
-  description: "Mock screens for the Stoep buurt-prototype (pilot, Indische Buurt).",
+  title: "Uitwijken.nl — civic layer prototype",
+  description:
+    "Proof-of-concept screens for a society-owned location-and-theme civic community layer.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

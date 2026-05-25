@@ -21,11 +21,11 @@ export function DocsSidebar() {
           href="/docs"
           className={`block text-xs uppercase tracking-widest mb-4 ${
             current === "readme"
-              ? "text-[var(--color-stoep)] font-semibold"
-              : "text-[var(--color-stoep)]"
+              ? "text-[var(--color-uitwijken)] font-semibold"
+              : "text-[var(--color-uitwijken)]"
           }`}
         >
-          Stoep · wiki
+          Uitwijken.nl · wiki
         </Link>
         {DOC_GROUPS.map((g) => {
           const groupActive = g.items.some((i) => i.slug === current);
@@ -34,7 +34,7 @@ export function DocsSidebar() {
               <div
                 className={`text-[11px] uppercase tracking-wider mb-2 ${
                   groupActive
-                    ? "text-[var(--color-stoep)] font-semibold"
+                    ? "text-[var(--color-uitwijken)] font-semibold"
                     : "text-[#6b6658]"
                 }`}
               >
@@ -50,8 +50,8 @@ export function DocsSidebar() {
                         aria-current={isActive ? "page" : undefined}
                         className={`block py-0.5 pl-2 -ml-2 border-l-2 transition-colors ${
                           isActive
-                            ? "border-[var(--color-stoep)] text-[var(--color-stoep)] font-semibold"
-                            : "border-transparent text-[#1f1e1a] hover:text-[var(--color-stoep)] hover:underline"
+                            ? "border-[var(--color-uitwijken)] text-[var(--color-uitwijken)] font-semibold"
+                            : "border-transparent text-[#1f1e1a] hover:text-[var(--color-uitwijken)] hover:underline"
                         }`}
                       >
                         {i.title}
@@ -64,7 +64,7 @@ export function DocsSidebar() {
           );
         })}
         <div className="mt-6 text-[11px] text-[#6b6658] leading-relaxed">
-          Live-read from <code>~/obsidian/Stoep/</code>. Edits in Obsidian appear on refresh.
+          Concept, product proof, and delivery notes for the current prototype.
         </div>
       </div>
     </aside>

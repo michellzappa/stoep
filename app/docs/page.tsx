@@ -5,7 +5,7 @@ export default async function DocsIndex() {
   const doc = await readDoc("readme");
   if (!doc) {
     return (
-      <div className="prose-stoep">
+      <div className="prose-uitwijken">
         <p>README.md not found in vault.</p>
       </div>
     );

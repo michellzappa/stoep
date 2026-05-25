@@ -4,15 +4,22 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { LangToggle, T } from "../lib/i18n";
 
-const NAV_LINKS = [
-  { href: "/feed", nl: "Feed", en: "Feed" },
-  { href: "/melding", nl: "Melding", en: "Report" },
-  { href: "/digest", nl: "Digest", en: "Digest" },
-  { href: "/adres", nl: "Adres", en: "Address" },
-  { href: "/onboarding", nl: "Onboarding", en: "Onboarding" },
-  { href: "/moderatie", nl: "Moderatie", en: "Moderation" },
+type NavLink = {
+  href: string;
+  nl: string;
+  en: string;
+  prefix?: boolean;
+};
+
+const NAV_LINKS: readonly NavLink[] = [
+  { href: "/map", nl: "Kaart", en: "Map" },
+  { href: "/themes", nl: "Thema", en: "Theme" },
+  { href: "/vragen", nl: "Vragen", en: "Questions" },
+  { href: "/events", nl: "Events", en: "Events" },
+  { href: "/inbox", nl: "Inbox", en: "Inbox" },
+  { href: "/governance", nl: "Governance", en: "Governance" },
   { href: "/docs", nl: "Wiki", en: "Wiki", prefix: true },
-] as const;
+];
 
 function isNavActive(pathname: string, href: string, prefix?: boolean) {
   if (prefix) return pathname === href || pathname.startsWith(`${href}/`);
@@ -26,13 +33,13 @@ export function TopBar() {
     <div className="sticky top-0 z-20 bg-[var(--color-paper)]/90 backdrop-blur border-b border-[#e6e2d6]">
       <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between flex-wrap gap-3">
         <Link href="/" className="flex items-center gap-2">
-          <span className="w-6 h-6 rounded-md bg-[var(--color-stoep)] inline-block" />
-          <span className="font-serif italic text-xl">Stoep</span>
+          <span className="w-6 h-6 rounded-md bg-[var(--color-uitwijken)] inline-block" />
+          <span className="font-serif italic text-xl">Uitwijken.nl</span>
           <span className="text-xs uppercase tracking-widest text-[#6b6658] ml-2">
-            wireframes · v0.2
+            civic layer · v0.3
           </span>
         </Link>
-        <div className="flex items-center gap-4 text-sm">
+        <div className="flex items-center gap-3 text-sm flex-wrap justify-end">
           {NAV_LINKS.map(({ href, nl, en, prefix }) => {
             const active = isNavActive(pathname, href, prefix);
             return (
@@ -42,7 +49,7 @@ export function TopBar() {
                 aria-current={active ? "page" : undefined}
                 className={
                   active
-                    ? "font-semibold text-[var(--color-stoep)] underline underline-offset-4 decoration-[var(--color-stoep)]"
+                    ? "font-semibold text-[var(--color-uitwijken)] underline underline-offset-4 decoration-[var(--color-uitwijken)]"
                     : "text-[#3b3a35] hover:underline"
                 }
               >
@@ -68,7 +75,7 @@ export function PageHeader({
 }) {
   return (
     <div className="max-w-6xl mx-auto px-6 pt-10 pb-8">
-      <div className="text-xs uppercase tracking-widest text-[var(--color-stoep)] mb-2">
+      <div className="text-xs uppercase tracking-widest text-[var(--color-uitwijken)] mb-2">
         {eyebrow}
       </div>
       <h1 className="font-serif italic text-4xl leading-tight mb-3">{title}</h1>

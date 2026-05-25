@@ -1,28 +1,28 @@
-# Stoep wireframes
+# Uitwijken.nl prototype
 
-Interactive mock screens and concept notes for **Stoep** — a proposed open, hyperlocal neighborhood network for Amsterdam buurten. The name is Dutch for *sidewalk* or *front step*: the threshold between private and public where neighbors actually meet. Stoep is envisioned as the digital equivalent: not a living room (WhatsApp), not a city square (Twitter), but the civic-social layer in between.
+Interactive mock screens and concept notes for **Uitwijken.nl** — a society-owned, location-and-theme-based civic community layer for Amsterdam and, eventually, other Dutch places.
 
-## What Stoep is about
+## What Uitwijken.nl is about
 
-Stoep is an exploration (2026) into whether Amsterdam can host a **local social network** that is:
+Uitwijken.nl explores whether Amsterdam can host a public-interest platform that is:
 
-- **Open source and federated** (ActivityPub / fediverse-native), not a closed commercial silo like Nextdoor
-- **Hyperlocal by default** — scoped to a gemeente-defined *buurt*, not engagement-ranked city-wide feeds
-- **Fused with municipal function** — meldingen, open data, buurtbudget, permits — as a first-class civic interface, not an afterthought
+- **Society-owned**, not government-owned and not company-owned.
+- **Location-aware**, with a cascading model from house to street to buurt to city.
+- **Theme-based**, so healthcare, events, safety, public space, budgets, services, and plans can be understood at the right scale.
+- **Role-aware**, connecting residents, government, and entrepreneurs in one civic environment.
+- **Action-oriented**, moving from information to questionnaires, decisions, events, services, and physical-world participation.
 
-The core bet: neighborhood platforms that last either run on commercial intensity or on tight integration with public function. Stoep pursues the second path.
+**Status:** concept and wireframes only. This repo is for thinking, pitching, and co-design, not a product build.
 
-**Status:** concept and wireframes only. This repo is for thinking, pitching, and co-design — not a product build.
-
-## What’s in this repo
+## What's in this repo
 
 | Area | Purpose |
 |------|---------|
-| **`/` (home)** | Index of six phone-framed mock screens for the Indische Buurt pilot |
-| **`/feed`, `/melding`, …** | Individual wireframes (bilingual NL/EN) |
-| **`/docs`** | Wiki rendered from `content/wiki/` — vision, governance, stack, adoption, risks, etc. |
+| **`/` (home)** | Index of six proof-of-concept screens |
+| **`/map`, `/themes`, `/vragen`, `/events`, `/inbox`, `/governance`** | Wireframes for the location-and-theme civic layer |
+| **`/docs`** | Wiki rendered from `content/wiki/` |
 
-The six mocks stress-test key primitives: neighborhood feed, civic reporting (Signalen), weekly digest from open data, street history per address, tiered *buurtpaspoort* verification, and a neighborhood-connector moderation dashboard.
+The six active mocks demonstrate the new backbone: map lens, theme view, questionnaire and budget, events and action, civic inbox, and governance.
 
 ## Run locally
 
@@ -35,5 +35,4 @@ App runs at [http://localhost:3777](http://localhost:3777).
 
 ## Related
 
-- Concept notes: `content/wiki/` (also browsable at `/docs`)
-- Main product exploration repo: [github.com/michellzappa/stoep](https://github.com/michellzappa/stoep)
+Concept notes live in `content/wiki/` and are browsable at `/docs`.

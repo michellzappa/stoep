@@ -1,105 +1,96 @@
 # Concepts
 
-Core primitives. Each is a building block that can be prototyped, tested, and iterated before the whole product exists. Some are architectural, some are product, some are civic.
+These are the primitives the proof-of-concept must make visible.
 
-## Buurt-as-unit
+## Cascading Geography
 
-The atomic scope is the gemeente's own administrative buurt polygon, fetched from data.amsterdam.nl. Not a radius, not a tech-chosen hexagon, not a neighborhood the user draws. This matters because:
+Uitwijken.nl is built around a dynamic location model, not a flat group model. A user should be able to move naturally between:
 
-- It matches how gemeente communicates, budgets, and reports.
-- It is legible to every Amsterdammer — people already know their buurt.
-- It makes the platform's "local" and the city's "local" the same thing, which is the whole adoption lever.
+- My house or building
+- My street
+- My buurt
+- My district
+- My city
+- My province or country
 
-Federation lets buurten connect upward to stadsdeel or city-wide for specific topics, but daily default stays local.
+Each level carries its own discussions, plans, events, decisions, services, and initiatives. The same theme can exist at different scales. Healthcare in a street may mean checking on older neighbors; healthcare in a buurt may mean access to a clinic; healthcare in a city may mean policy, budgets, and public consultation.
 
-## Buurtpaspoort
+## Theme Layer
 
-Verified, portable identity tied to a BAG address. You live at a real address in this buurt, full stop.
+Every item on Uitwijken.nl should belong to one or more themes. Themes can be chosen by the person posting, inferred from content, clustered by AI, and connected through a broader/narrower subject hierarchy.
 
-- Verification via gemeente-linked flow (possibly DigiD, possibly an address postcard, possibly both).
-- Identity is portable across federated instances. Moving stadsdelen does not mean starting over — your civic history, contributions, reputation follow you.
-- Real names. Anonymity poisons buurt discourse; Nextdoor got this right and it is worth copying.
-- Could become a civic primitive beyond Stoep — a lightweight verified-neighbor identity that other municipal services could recognise.
+Example hierarchy:
 
-Speculative but high-leverage.
+- Health
+- Health > elderly care
+- Health > youth mental health
+- Health > local clinics
+- Health > loneliness
 
-## Buurt-digest
+The theme layer is what makes Uitwijken.nl more than a map and more than a feed. It lets the user ask: what is happening around this subject, at this location scale, involving which roles?
 
-Weekly auto-generated summary for each buurt: N meldingen resolved, M new omgevingsvergunningen, K upcoming evenementen, one historical photo of a street in the buurt, one featured tree, one buurtbudget proposal open for voting.
+## Map-First Interface
 
-- Almost entirely machine-generated from [[Open-data|open data]].
-- Printed version posted on the buurthuis noticeboard and supermarket bulletin. This is the offline bridge.
-- Emailable, subscribable, federates.
-- Doubles as the "reason to open the app this week" without relying on user-generated activity.
+The map is not decoration. It is the primary way to understand scope. Items are geotagged, clustered, filtered, and shown according to the selected scale and theme.
 
-## Straatgeschiedenis
+Amsterdam is a strong first implementation because public data can provide streets, postal codes, buurt polygons, permits, public-space reports, events, facilities, and planning layers.
 
-Per-street timeline combining Stadsarchief photos, permit history, building age, monument status, and resident contributions. Every address becomes a small museum.
+## Three-Role Participation
 
-- Ambient context that makes the platform feel *rooted in place*.
-- Impossible for Nextdoor to match — they don't have the data and wouldn't integrate it if they did.
-- High engagement for low effort: residents discover what their own house looked like in 1935.
-- Natural invitation to contribute: "do you have a photo of this corner before the renovatie?"
+Uitwijken.nl should distinguish the source and role of participation:
 
-## Federation
+- Resident signal: needs, feedback, lived experience, requests, initiatives.
+- Government signal: plans, budgets, safety, permits, questionnaires, public information.
+- Entrepreneur signal: services, venues, facilities, local offers, sponsorship, practical support.
 
-ActivityPub at the core. See [[Technical-stack]] for which codebase.
+The product should avoid flattening everything into "posts." A government consultation, a local event, a resident request, and a business service are different civic objects.
 
-- Each buurt could be its own federated community (or each stadsdeel, depending on scaling economics).
-- Inter-buurt federation for city-wide topics (OV diversions, gemeentewide consultations, stadsbrede evenementen).
-- Cross-gemeente federation later: Amsterdam Oost federates with Utrecht Lombok if the Common Ground layer lines up.
-- Federation is also the governance exit: if gemeente steward fails, residents keep their instance.
+## Questionnaires And Decisions
 
-## Moderation-as-civic-role
+Questionnaires are a first-class feature. They can be used to:
 
-Moderators are neighbors with visible names, operating under publicly-written community norms. Appeals go to a buurt council, not a Trust & Safety team.
+- Ask what residents consider important.
+- Prioritize themes and locations.
+- Gather feedback on government plans.
+- Allocate or advise on neighborhood budgets.
+- Surface needs from below.
+- Test whether official priorities match lived reality.
 
-- Rotating or elected, not appointed-for-life.
-- Paid modestly or compensated with public recognition — not volunteer forever (that model burns out).
-- Norms are a living document, editable through buurt consultation.
-- This is both a product feature and a political stance: governance visible, accountable, and local.
+A questionnaire should always be tied to a location scale and a theme, so the result is actionable.
 
-## Offline bridges
+## Events As Adoption Hook
 
-Every failure mode of "neighborhood app" resolves to: only young techies used it. Counter-design from day one.
+Events give people an immediate reason to visit before they are ready to participate deeply. The platform should aggregate and contextualize:
 
-- Printed weekly [[Concepts|buurt-digest]] on the buurthuis noticeboard.
-- SMS fallback for urgent buurt-wide messages (elderly, low-tech residents).
-- Paper QR flyers with address-verified signup in buurthuis, supermarket, library.
-- Physical launch events (buurtborrels) as the primary recruitment channel — see [[Adoption]].
+- Municipal events
+- Buurt events
+- Cultural programming
+- Volunteer opportunities
+- Entrepreneur-hosted activities
+- Resident initiatives
 
-## Smaller-internet scope
+Events are also the bridge from digital information to physical gathering.
 
-Default experience is deliberately **smaller than one WhatsApp group** — roughly 200 neighbors on your straat, not a city feed. This is not a launch constraint to outgrow; it is the post-naive bet that legitimacy and civic outcomes come from bounded community, not scale. See [[Smaller-internets]].
+## Civic Inbox
 
-## No engagement metrics
+Residents should not have to monitor scattered websites, newsletters, WhatsApp groups, commercial event platforms, and government pages. Uitwijken.nl should become a contextual civic inbox based on selected locations and themes.
 
-Explicit anti-feature.
+Examples:
 
-- No algorithmic feed, no "trending," no "For You."
-- Chronological, proximity-scoped.
-- No public follower counts, no post counts, no gamification.
-- This is a product differentiator *and* a funding story. A municipality will pay for infrastructure that explicitly rejects engagement-maximisation. They will not pay for Nextdoor with Dutch skin.
+- A new permit affects my street.
+- A budget questionnaire is open for my buurt.
+- A city plan concerns a theme I follow.
+- An event near me matches my interests.
+- A business or facility nearby can help with a local need.
 
-## Multilingual-native
+## Formal And Informal Communities
 
-Amsterdam buurten are genuinely multilingual. Auto-translation between NL, EN, AR, TR at minimum.
+Some communities are formal: tied to official decisions, public budgets, government plans, or recognized local governance. These need accountable moderation boards rooted in physical community.
 
-- Authoring in any language; others read in theirs.
-- Translation as a first-class primitive, not a bolt-on.
-- This is a concrete feature WhatsApp groups cannot offer and a direct inclusion win that gemeente will fund.
+Other communities are informal: resident initiatives, interest groups, and open-source-style self-organized spaces. These can use lighter participant-led governance.
 
-## Civic interface layer
-
-The platform is a *read-and-write interface* over gemeente data, not a silo. See [[Open-data]] and [[Technical-stack]].
-
-- Meldingen reported in Stoep flow to Signalen (SIA).
-- Buurtbudget votes flow to the participation backend.
-- Omgevingsvergunningen surface ambiently.
-- Inspraak / consultations scoped to the buurt appear where residents actually are, not buried on amsterdam.nl.
-
-This is what makes it civic infrastructure and not another social app.
+Uitwijken.nl needs both, and the interface should make the difference legible.
 
 ## Tags
 
-#year/2026 #env/planning #city/amsterdam
+#year/2026 #env/pitch #city/amsterdam

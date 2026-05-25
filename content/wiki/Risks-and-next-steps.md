@@ -1,81 +1,50 @@
 # Risks and Next Steps
 
-## The graveyard
+## Main Risk
 
-Neighborhood social networks have a long list of failures. Worth studying before building another one.
+The main risk is not technology. It is organizational clarity. If Uitwijken.nl cannot explain who owns it, who funds it, who builds it, and why Amsterdam should care, the idea will remain interesting but unsupported.
 
-| Project | Country | Status | What killed it |
-|---|---|---|---|
-| **Mijnbuurtje** | NL | Moribund | Thin value prop, no municipal fusion, ghost town |
-| **Buurbook** | NL | Gone | Commercial model, no civic utility |
-| **Hoplr** | BE/NL | Partially active | Commercial, closed, gemeente-adjacent but not fused |
-| **Various gemeente pilots** | NL | Mostly ended | Procurement, no seeding strategy, no owner post-pilot |
-| **Nextdoor** | US → global | Commercial success, civic failure | Toxic discourse, surveillance model, gemeente-hostile |
+## Risks To Counter-Design
 
-**The pattern.** Projects that persist either:
+### Looks Like Another Neighborhood App
 
-- (a) have commercial intensity Nextdoor-style — advertising, growth teams, aggressive engagement loops — or
-- (b) are tightly fused with municipal function.
+If the first screen is a feed, people will compare Uitwijken.nl to Nextdoor, Facebook groups, WhatsApp, or Reddit. The prototype must lead with the location-plus-theme backbone.
 
-Stoep's only plausible path is (b). Which means **the gemeente integration is not a nice-to-have. It is the entire adoption strategy.** See [[Adoption]].
+### Too Government-Owned
 
-## Failure modes to counter-design
+If the product feels like a municipal portal, it loses the society-owned premise. Government should be a participant and enabler, not the platform owner.
 
-### Ghost town at launch
+### Too Abstract
 
-- **Cause:** not enough seed density; users arrive, find nothing, leave, don't come back.
-- **Counter:** co-design with 10–20 residents before coding. Seed the [[Concepts|buurt-digest]] with civic data from day one so there is always content. Buurtconnector recruitment. Physical launch.
+The concept can sound like infrastructure theory. The proof-of-concept must show concrete flows: zoom map, choose theme, answer question, find event, see plan, understand roles.
 
-### Complaint board
+### No Team
 
-- **Cause:** the only people motivated to post are angry people. Discourse degrades, normal people leave.
-- **Counter:** civic utility primitives (tools library, events, straatgeschiedenis) designed in from the start — not social feed primitives. [[Concepts|Moderation-as-civic-role]] with publicly written norms. Meldingen flow to Signalen, so complaints have a real resolution path instead of being rhetoric.
+A next phase without a project lead and organizational owner will likely stall before the product questions are tested.
 
-### Only young techies use it
+### Data Without Action
 
-- **Cause:** digital-only onboarding, unfamiliar UX.
-- **Counter:** [[Concepts|offline bridges]] from launch. Printed buurt-digest on the buurthuis noticeboard. SMS fallback. Physical QR flyers. Buurtconnector onboarding in person.
+A beautiful map of information is not enough. Every important object should point toward a next action: attend, respond, vote, comment, offer help, ask a question, join a board.
 
-### Loses momentum post-pilot
+### Funding Without Sustainability
 
-- **Cause:** no owner after the 6-month pilot budget ends.
-- **Counter:** coöperatie U.A. as long-term steward. Continuation funding lined up during the pilot (SIDN, NLnet, next gemeente budget cycle). See [[Funding]].
+One grant can fund a demo, but not the civic layer. The funding model must be part of the design, even if it remains unresolved.
 
-### Gemeente loses interest mid-pilot
+## What The Minouch Conversation Should Test
 
-- **Cause:** political turnover, budget reallocation, scope creep from gemeente side.
-- **Counter:** the NLnet / SIDN parallel track means municipal funding is not a single point of failure. Matched funding model. Clear written scope in the commissioning contract.
+- Does Amsterdam innovation recognize the location-plus-theme civic layer as useful?
+- Is there appetite for a proof-of-concept around open data, events, questionnaires, and local participation?
+- Which live policy question, budget, neighborhood, or theme could anchor a pilot?
+- Who inside or around the municipality could sponsor the next phase?
+- What form of society-owned governance would be credible in the Netherlands?
 
-### AVG/GDPR incident
+## Concrete Next Steps
 
-- **Cause:** BAG verification done poorly, data leak, sensitive buurt information exposed.
-- **Counter:** data minimisation from day one. AVG review before launch. No third-party analytics. No engagement metrics instrumented. See [[Technical-stack]].
-
-### Captured by a faction
-
-- **Cause:** a local faction dominates moderation, drives out dissenters.
-- **Counter:** rotating moderators, publicly written norms, buurt council appeals, federation as governance exit — residents can keep their instance even if governance fails.
-
-## Honest risks that may not be solvable
-
-- **Dutch civic participation is declining generally.** Stoep will not reverse this trend; at best it supports the subset of buurten that are already actively civic.
-- **WhatsApp is deeply entrenched and actually works.** Stoep is additive, not a replacement. If residents are asked to "switch," they will not. Frame correctly.
-- **Open source burnout.** The civic integration layer will need sustained maintenance past year 1. The coöperatie has to solve this or it breaks.
-- **Language politics.** Dutch-first but multilingual-native is the right design but will draw criticism from several sides. Accept and document the position.
-
-## Concrete next steps
-
-In rough order:
-
-1. **One-pager** in Dutch + English: problem, approach, pilot scope (one stadsdeel, 6 months), budget range (€105k–160k per [[Funding]]), governance. One page each.
-2. **Identify the municipal sponsor.** Likely CTO Office or a specific stadsdeel digitalisering lead. Marineterrein contacts can route.
-3. **Parallel-track an NLnet NGI0 application.** Rolling deadlines, fast turnaround. Don't depend on municipal timelines alone. See [[Funding]].
-4. **Technical spike:** stand up Bonfire locally, validate fit in one week. Stand up one Signalen integration, one BAG verification flow, one Stadsarchief lookup. See [[Technical-stack]], [[Open-data]].
-5. **Map 3–4 high-value open data APIs** to specific [[Concepts|concept]] features. Confirm they actually work end-to-end before the pitch.
-6. **Identify the pilot buurt.** Ask the stadsdeel which buurten have the most active civic infrastructure. See [[Adoption]].
-7. **Open conversations with Waag Futurelab, PublicSpaces, Open State Foundation, Common Ground community.** Alignment and allies before funding ask goes in.
-8. **Draft coöperatie structure** in sketch form. Don't form yet — but know the shape when the pilot delivers.
+1. Build a map-first proof-of-concept with six screens.
+2. Prepare a short pitch flow: problem, backbone, demo, governance, ask.
+3. Identify one Amsterdam geography and one theme for a plausible pilot.
+4. Define the minimum team and budget for a 6 to 10 week discovery/prototype phase.
 
 ## Tags
 
-#year/2026 #env/planning #city/amsterdam
+#year/2026 #env/pitch #city/amsterdam
